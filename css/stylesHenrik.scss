@@ -1,0 +1,126 @@
+/** Colors **/
+$black : #000;
+$white : #fff;
+$grey : #666;
+
+/** Margins **/
+@mixin margin24 {
+  margin: 24px;
+}
+
+/** Paddings **/
+
+
+/** Borders **/
+
+
+@mixin border1 {
+  border: 0.5px solid $black;
+}
+
+.pagecard{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+width: calc(100% - 48px);
+  height: calc(100% - 48px);
+
+  @include border1;
+  @include margin24;
+}
+
+.cardHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include margin24;
+}
+
+.cardHeader span{
+  font-weight: 550;
+}
+
+.topLogo{
+  max-width: 25%;
+
+}
+
+.hvemervi{
+
+}
+
+.omOsBoks{
+  font-family: Arial;
+  text-align: center;
+
+  color: #666666;
+
+  @include margin24;
+}
+
+.omOsBoks h5.a{
+  margin-top: 24px;
+  text-underline: #666666;
+}
+
+.solid {
+  display: block;
+  border: 0.3px solid $black;
+  width: 50%;
+  margin-right: 50%;
+}
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(244,244,244,0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  left: -60px;
+  border-radius: 10%;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+.gruppebilled {
+  margin: 24px;
+  margin-bottom: 0;
+  height: auto;
+  max-height: 55%;
+
+  @include margin24;
+  margin-top: -50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.moedTeamet{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+  height: fit-content;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 55%;
+
+  cursor: pointer;
+
+}
+
+.moedTeametSektion{
+
+}
