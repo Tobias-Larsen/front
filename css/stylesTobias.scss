@@ -5,7 +5,8 @@
 /* Ovenstående kode kan give problemer ved nogle 3. parts scripts man henter. Men det gør det nemmere at forstå og lave kodning når man starter. */
 
 html {
-  overflow-y: scroll;
+  overflow-y: hidden;
+  //scroll-behavior: smooth;
 }
 
 body {
@@ -37,4 +38,87 @@ img {
   display: block; /* Billeder er et element (laver linjeskift) */
   max-width: 100%; /* Bredde må maks fylde 100% */
   height: auto; /* Højden skal tilpasse sig */
+}
+
+.borderTest{
+  border: 24px white solid;
+}
+
+.heightWindow{
+  transition: 0.3s;
+}
+
+.landing{
+  background-image: url("../img/bgLanding.jpg");
+  background-position: center;
+  background-size: cover;
+
+  > div{
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 260px;
+    height: 110px;
+
+    > img{
+      width: 200px;
+    }
+  }
+}
+
+.firstSection{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  > .image{
+    background-image: url("../img/bgTilbyde.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  > .textContainer{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (min-width: 568px){
+  .landing{
+    background-image: url("../img/bgLanding1.jpg");
+
+
+    > div{
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.noOpacity{
+  opacity: 0;
 }
