@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"stylesMostafa.min.css","sourcesContent":[]}
+{"version":3,"sources":["stylesMostafa.scss"],"names":[],"mappings":"AAIA,YACE,YAAa,CACb,WAAY,CACZ,oBAAuB","file":"stylesMostafa.min.css","sourcesContent":["\r\n\r\n\r\n\r\n.hovedframe{\r\n  height: 500px;\r\n  width: 400px;\r\n  border-color: chocolate;\r\n\r\n}"]}
