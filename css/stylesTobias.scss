@@ -64,6 +64,37 @@ img {
   }
 }
 
+.firstSection{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  > .image{
+    background-image: url("../img/bgTilbyde.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  > .textContainer{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (min-width: 568px){
+  .landing{
+    background-image: url("../img/bgLanding1.jpg");
+
+
+    > div{
+
+    }
+  }
+}
 
 
 
