@@ -34,22 +34,24 @@
 <!-- i <body> har man alt indhold på siden som brugeren kan se -->
 <body>
 
-<header class="hideHeader position-fixed px-4 mt-4 pt-2 w-100 d-flex flex-row justify-content-between px-md-5 mt-md-5 align-items-top">
+<header class="hideHeader position-fixed px-4 mt-4 pt-2 w-100 d-flex flex-row justify-content-between px-sm-5 mt-sm-5 align-items-sm-start">
     <img class="topLogo ml-3" src="img/logoFrontNoSlogan.svg" alt="Klik her for at komme til toppen">
 
     <div class="navContainer mr-3 d-flex justify-content-end align-items-center">
         <nav class="">
             <div class="navCycle headerColor font-weight-bold d-flex flex-column align-items-end">
-                <p class="py-1">Forside</p>
-                <p class="py-1">Hvad tilbyder vi?</p>
-                <p class="py-1">Hvem er vi?</p>
-                <p class="py-1">Kontakt os</p>
+                <p class="pageListItem py-1 hej">Forside</p>
+                <p class="pageListItem py-1">Hvad tilbyder vi?</p>
+                <p class="pageListItem py-1">Hvem er vi?</p>
+                <p class="pageListItem py-1">Kontakt os</p>
             </div>
         </nav>
-        <div class="d-flex flex-column d-md-none">
+        <div class="d-flex flex-column d-sm-none">
             <i class="headerColor fas fa-chevron-up pb-1 pl-2"></i>
             <i class="headerColor fas fa-chevron-down pt-1 pl-2"></i>
         </div>
+
+        <i class="headerColor fas fa-caret-left d-none d-sm-block pl-sm-2 align-self-start"></i>
     </div>
 </header>
 
@@ -65,7 +67,7 @@
 <section class="firstSection heightWindow borderTest w-100">
     <div class="image"></div>
 
-    <div class="textContainer px-4 d-flex flex-column justify-content-center pl-md-5 ml-md-5">
+    <div class="textContainer px-4 d-flex flex-column justify-content-center pl-sm-5 pr-sm-0 ml-sm-5">
         <div class="line mb-2"></div>
         <p class="font-weight-bold">Digitale løsninger til din virksomhed</p>
         <p>Vi elsker at udfolde vores kreativitet, på din

@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded",() => {
 
 window.addEventListener('resize', () => {
     reportWindowSize();
+
+    headerSizing();
 });
 
 let counterScroller = 0;
@@ -80,21 +82,45 @@ let header = document.querySelector("header");
 let nav = document.querySelector(".navContainer > nav");
 let navHeight = nav.clientHeight;
 let navElmCycle = document.querySelector(".navCycle");
+let indicator = document.querySelector(".navContainer > .fa-caret-left");
 
 let pageUp = document.querySelector(".fa-chevron-up");
 let pageDown = document.querySelector(".fa-chevron-down");
 
+let allPages = document.querySelectorAll(".pageListItem");
+
+function currentPage() {
+    allPages.forEach((item) => {
+        item.style.opacity = "0.6";
+    });
+
+    let currentPage = document.getElementsByClassName("pageListItem")[counterScroller];
+    currentPage.style.opacity = "1";
+}
+
 function cycleNav() {
+    currentPage();
+
     if (counterScroller === 0){
         header.classList.add("hideHeader");
         if (widthOfWindow < 576){
             navElmCycle.style.marginTop = (1) * - navHeight + "px";
+        } else {
+            indicator.style.marginTop = (1) * navHeight/4 + "px";
         }
     } else {
         header.classList.remove("hideHeader");
         if (widthOfWindow < 576){
             navElmCycle.style.marginTop = (counterScroller) * - navHeight + "px";
+        } else {
+            indicator.style.marginTop = (counterScroller) * navHeight/4 + "px";
         }
+    }
+}
+
+function headerSizing() {
+    if (widthOfWindow >= 576){
+        navElmCycle.style.marginTop = 0;
     }
 }
 
@@ -140,4 +166,21 @@ document.querySelector(".landing > .fa-chevron-down").addEventListener("click",(
         //Pausing scrolling
         pauseScrollListener();
     }
+});
+
+
+//Clicked menu element
+
+
+allPages.forEach((e) => {
+    e.addEventListener("click",() => {
+        let clickedElement = (e.offsetTop - 8) / e.clientHeight;
+        counterScroller = clickedElement;
+
+        console.log("to page number " + clickedElement, counterScroller);
+        scroll();
+
+        //Pausing scrolling
+        pauseScrollListener();
+    });
 });

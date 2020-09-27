@@ -67,6 +67,10 @@ header{
 
       .navCycle{
         transition: 0.3s;
+
+        > p{
+          transition: 0.3s;
+        }
       }
     }
 
@@ -147,6 +151,7 @@ header{
   header{
     > .topLogo{
       width: 120px;
+      cursor: pointer;
     }
 
     > .navContainer{
@@ -154,6 +159,18 @@ header{
       > nav{
         height: auto;
         overflow: visible;
+
+        > div{
+
+          > p{
+            cursor: pointer;
+          }
+        }
+      }
+
+      .fa-caret-left{
+        line-height: 32px;
+        transition: 0.3s;
       }
     }
   }
