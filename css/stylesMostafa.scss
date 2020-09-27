@@ -8,6 +8,8 @@
 body {
   margin: 0; /* Ingen kanter i siden af browser */
   color: #0d0d31;
+  font-family: sans-serif;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,7 +44,10 @@ $font-size-hovedskrift:24px;
 $font-size-indhold:16px;
 
 
-
+h1{
+  font-size: 26px;
+  font-weight: bold;
+}
 
 
 .hovedframe{
@@ -62,6 +67,9 @@ $font-size-indhold:16px;
    }
 }
 
+.EogI{
+  font-size: 16px;
+ }
 
 
 
