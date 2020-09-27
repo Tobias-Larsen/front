@@ -25,6 +25,8 @@
     <link href="css/stylesMostafa.min.css" rel="stylesheet" type="text/css">
     <link href="css/stylesHenrik.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
 
 
 
@@ -77,7 +79,7 @@
             <div class="d-flex justify-content-center mx-2 my-4 mx-md-4 my-md-5 my-lg-4 text-light"><h1>kontakt os</h1></div>
 
             <div class="d-md-flex flex-md-row justify-content-lg-center">
-                <div class="d-flex justify-content-center justify-content-lg-start pr-lg-5">
+                <div class="showcase-left d-flex justify-content-center justify-content-lg-start pr-lg-5">
                     <iframe class="d-sm-none" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d575.3575985634228!2d11.86483!3d54.772401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356ec3633d2a36d8!2sBusiness%20Lolland-Falster!5e0!3m2!1sda!2sdk!4v1600978109351!5m2!1sda!2sdk" width="250" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     <iframe class="specileSize pr-lg-5 d-none d-sm-block" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d575.3575985634228!2d11.86483!3d54.772401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356ec3633d2a36d8!2sBusiness%20Lolland-Falster!5e0!3m2!1sda!2sdk!4v1600978109351!5m2!1sda!2sdk" width="700" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
@@ -100,9 +102,20 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/scrollSnappy.js"></script>
 <script>
-
-    $(function () {
-
+    window.sr = ScrollReveal();
+    sr.reveal('.navbar', {
+        duration: 2000,
+        origin:'bottom'
+    });
+    sr.reveal('.showcase-left', {
+        duration: 2000,
+        origin:'left',
+        distance:'300px'
+    });
+    sr.reveal('.contact-section2', {
+        duration: 2000,
+        origin:'right',
+        distance:'300px'
     });
 
 </script>
