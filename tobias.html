@@ -37,17 +37,40 @@
 <!-- i <body> har man alt indhold på siden som brugeren kan se -->
 <body>
 
+<header class="hideHeader position-fixed px-4 mt-4 pt-2 w-100 d-flex flex-row justify-content-between px-sm-5 mt-sm-5 align-items-sm-start">
+    <img class="topLogo ml-3" src="img/logoFrontNoSlogan.svg" alt="Klik her for at komme til toppen">
+
+    <div class="navContainer mr-3 d-flex justify-content-end align-items-center">
+        <nav class="">
+            <div class="navCycle headerColor font-weight-bold d-flex flex-column align-items-end">
+                <p class="pageListItem py-1 hej">Forside</p>
+                <p class="pageListItem py-1">Hvad tilbyder vi?</p>
+                <p class="pageListItem py-1">Hvem er vi?</p>
+                <p class="pageListItem py-1">Kontakt os</p>
+            </div>
+        </nav>
+        <div class="d-flex flex-column d-sm-none">
+            <i class="headerColor fas fa-chevron-up pb-1 pl-2"></i>
+            <i class="headerColor fas fa-chevron-down pt-1 pl-2"></i>
+        </div>
+
+        <i class="headerColor fas fa-caret-left d-none d-sm-block pl-sm-2 align-self-start"></i>
+    </div>
+</header>
+
 <section class="landing heightWindow borderTest w-100 d-flex justify-content-center align-items-center">
     <div class="d-flex justify-content-center align-items-center mb-3">
         <img src="img/logoFront.svg" alt="Logo for Front">
     </div>
+
+    <i class="fas fa-chevron-down "></i>
 </section>
 
 
 <section class="firstSection heightWindow borderTest w-100">
     <div class="image"></div>
 
-    <div class="textContainer px-4 d-flex flex-column justify-content-center">
+    <div class="textContainer px-4 d-flex flex-column justify-content-center pl-sm-5 pr-sm-0 ml-sm-5">
         <div class="line mb-2"></div>
         <p class="font-weight-bold">Digitale løsninger til din virksomhed</p>
         <p>Vi elsker at udfolde vores kreativitet, på din
@@ -60,21 +83,6 @@
 <section class="heightWindow borderTest w-100 bg-secondary">
     <div class="d-flex flex-column">
         <div class="hovedframe hovedborder">
-            <div class="d-flex flex-row justify-content-between">
-                <div class="aabb">
-                    <img src="img/LogoPNG.png" class="pl-3 topLogo" alt="top logo">
-                </div>
-
-                <div class="nav-dropdown pr-5">
-                    <span class="text-light">Kontakt os</span>
-                    <div class="nav-dropdown-content">
-                        <p>Forside</p>
-                        <p>Hvad tilbyder vi?</p>
-                        <p>Hvem er vi?</p>
-                        <p>Kontakt os</p>
-                    </div>
-                </div>
-            </div>
 
             <div class="d-flex justify-content-center mx-2 my-4 mx-md-4 my-md-5 my-lg-4 text-light"><h1>kontakt os</h1></div>
 
