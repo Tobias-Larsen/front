@@ -8,6 +8,7 @@ $grey : #666;
   margin: 24px;
 }
 
+$window-width : 100%;
 /** Paddings **/
 
 
@@ -52,17 +53,43 @@ width: calc(100% - 48px);
 }
 
 .omOsBoks{
+  max-width: 80%;
   font-family: Arial;
   text-align: center;
 
-  color: #666666;
+  color: #eee;
+
+  max-width: 700px;
 
   @include margin24;
+  margin-top: 100px;
+
+  h3{
+    display: inline-block;
+  }
 }
 
-.omOsBoks h5.a{
+@media (min-width: 768px) {
+  .omOsBoks{
+    margin-left: 14%;
+  }
+
+}
+
+
+
+
+.laesMere {
   margin-top: 24px;
-  text-underline: #666666;
+  text-decoration: underline;
+  text-underline: #eee;
+  color: #EA8032;
+  font-size: 1.3rem;
+}
+
+
+.laesMere:hover {
+  color: #eee;
 }
 
 .solid {
@@ -70,6 +97,7 @@ width: calc(100% - 48px);
   border: 0.3px solid $black;
   width: 50%;
   margin-right: 50%;
+  max-width: 600px;
 }
 
 .nav-dropdown {
@@ -95,14 +123,17 @@ width: calc(100% - 48px);
 
 .gruppebilled {
   margin: 24px;
-  margin-bottom: 0;
   height: auto;
-  max-height: 55%;
+  max-height: 450px;
 
-  @include margin24;
-  margin-top: -50px;
+
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
+
+
+  cursor: pointer;
 }
 
 .moedTeamet{
@@ -117,10 +148,229 @@ width: calc(100% - 48px);
   margin-right: auto;
   top: 55%;
 
+  margin-top: 5%;
+
   cursor: pointer;
 
+  h5{
+    color: #eee;
+  }
 }
 
 .moedTeametSektion{
 
+}
+
+.laesMere{
+  cursor: pointer;
+}
+
+.hev-state1 {
+}
+
+
+.hev-state2 {
+  display: none;
+
+  height: 100%;
+  margin-bottom: 32px;
+}
+
+.hev-state3 {
+  display: none;
+  height: auto;
+  overflow: hidden;
+}
+
+
+.swiper-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 0;
+
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.swiper-slide{
+  height: 100%;
+
+  display: grid;
+  align-items: center;
+}
+
+.swiper-slide-active{
+  color: #eee;
+
+  background: rgba(240,240,240,0.6);
+}
+
+
+.swiper-slide:not(.swiper-slide-active){
+  opacity: 0.25 !important;
+  border: 0;
+  transform: scale(0.4);
+  transition: fade-in 8s cubic-bezier(0.1,0.2,0.3,0.4);
+  color: transparent;
+
+  .memberDescription{
+
+  }
+
+  .soMeBtn {
+  display: none;
+  }
+
+  .portfolioLinkBox, .portfolioLink{
+    display: none;
+  }
+}
+
+.swiperPage{
+  border: solid black 0.05px;
+
+}
+
+.swiperPage .teamMemberPic{
+  display: block;
+  min-height: 300px;
+  max-height: 300px;
+  max-width: 800px;
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  object-fit: cover;
+}
+
+div.swiper-button-prev, div.swiper-button-next{
+  color: #BC6A6A;
+}
+
+
+.someLinks{
+  display: grid;
+  grid-auto-flow: column;
+  margin-bottom: 24px;
+}
+
+.soMeBtn{
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.teamCardText {
+  font-size: 1.1rem;
+  text-align: center;
+
+}
+
+.memberDescription{
+font-weight: lighter;
+  text-align: left;
+  margin-bottom: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.boldTitle{
+font-weight: bolder;
+}
+
+.italicSubtitle{
+font-style: italic;
+}
+
+.smallerFont{
+  font-size: 14px;
+}
+
+.biggerFont{
+  font-size: 32px;
+}
+
+.portfolioLink{
+  display: grid;
+  text-align: center;
+  border: 1px solid;
+}
+
+.returnDiv {
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 2%;
+  color: #eee;
+
+  cursor: pointer;
+  z-index: 9999;
+
+  img{
+    max-width: 10%;
+  }
+}
+
+
+
+// Animations
+.slide-in-left,
+.slide-in-right {
+  animation-timing-function: linear;
+}
+
+.slide-in-left {
+  animation: 4s slide-in-left 1;
+}
+
+.slide-in-right {
+  animation: 3s slide-in-right 1;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translate(-$window-width, 50px) rotate(-40deg);
+  }
+  25% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  75% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  100% {
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translate($window-width, -50px) rotate(-40deg);
+  }
+  25% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  75% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, 500px) rotate(0deg);
+  }
 }

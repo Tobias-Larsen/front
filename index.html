@@ -10,24 +10,25 @@
     <meta charset="utf-8">
 
     <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>Hvem er vi?</title>
+    <title>Sigende titel</title>
 
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
     <meta name="robots" content="All">
-    <meta name="author" content="Piga">
+    <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
 
     <!--    Bootstrap css-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 
-
+    <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
-    <!--  <link href="css/stylesTobias.min.css" rel="stylesheet" type="text/css">--->
+    <link href="css/stylesTobias.min.css" rel="stylesheet" type="text/css">
     <link href="css/stylesMostafa.min.css" rel="stylesheet" type="text/css">
     <link href="css/stylesHenrik.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
 
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse - bliver brugt til responsive websider -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,116 +37,71 @@
 <!-- i <body> har man alt indhold på siden som brugeren kan se -->
 <body>
 
-<div class="hvemervi pagecard">
-    <div class="cardHeader">
-        <img src="images/frontlogo.pdf" class="topLogo" alt="top logo">
-        <div class="nav-dropdown">
-            <span>Hvem er vi?</span>
-            <div class="nav-dropdown-content">
-                <p>Forside</p>
-                <p>Hvad tilbyder vi?</p>
-                <p>Hvem er vi?</p>
-                <p>Kontakt os</p>
+<header class="hideHeader position-fixed px-4 mt-4 pt-2 w-100 d-flex flex-row justify-content-between px-sm-5 mt-sm-5 align-items-sm-start">
+    <img class="topLogo ml-3" src="img/logoFrontNoSlogan.svg" alt="Klik her for at komme til toppen">
+
+    <div class="navContainer mr-3 d-flex justify-content-end align-items-center">
+        <nav class="">
+            <div class="navCycle headerColor font-weight-bold d-flex flex-column align-items-end">
+                <p class="pageListItem py-1 hej">Forside</p>
+                <p class="pageListItem py-1">Hvad tilbyder vi?</p>
+                <p class="pageListItem py-1">Hvem er vi?</p>
+                <p class="pageListItem py-1">Kontakt os</p>
             </div>
+        </nav>
+        <div class="d-flex flex-column d-sm-none">
+            <i class="headerColor fas fa-chevron-up pb-1 pl-2"></i>
+            <i class="headerColor fas fa-chevron-down pt-1 pl-2"></i>
         </div>
+
+        <i class="headerColor fas fa-caret-left d-none d-sm-block pl-sm-2 align-self-start"></i>
     </div>
+</header>
+
+<section class="landing heightWindow borderTest w-100 d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-center align-items-center mb-3">
+        <img src="img/logoFront.svg" alt="Logo for Front">
+    </div>
+
+    <i class="fas fa-chevron-down "></i>
+</section>
+
+
+<section class="firstSection heightWindow borderTest w-100">
+    <div class="image"></div>
+
+    <div class="textContainer px-4 d-flex flex-column justify-content-center pl-sm-5 pr-sm-0 ml-sm-5">
+        <div class="line mb-2"></div>
+        <p class="font-weight-bold">Digitale løsninger til din virksomhed</p>
+        <p>Vi elsker at udfolde vores kreativitet, på din
+            virksomheds vegne. Om det er på sociale
+            medier, redesign af dit brand eller ny
+            hjemmeside, så er Front det rette sted for dig.</p>
+    </div>
+</section>
+<section class="heightWindow borderTest w-100 bg-info">
 
     <div class="hev-state1">
         <div class="omOsBoks slide-in-left">
-            <h5>hej!<br>
-                front består af en gruppe multimediedesignere fra Zealand Nykøbing F. der d. 28 sep til d. 17. okt. åbner et popup bureau med base hos Business LF på Slotsbryggen hvor vi..</h5>
+            <h2 class="boldTitle">hej!</h2><br>
+            <h3 class="boldTitle">front&#160;</h3><h3> består af en gruppe&#160; <h3 class="boldTitle">multimedie</h3><h3 class="italicSubtitle">designere</h3> fra Zealand Nykøbing F. der d. <h3 class="smallerFont">28 sep.</h3> til <h3 class="biggerFont">d. 17. okt.</h3> åbner et popup bureau med base hos Business LF på Slotsbryggen hvor vi vil løse en række opgaver for forskellige lokale virksomheder..</h3>
+            <br>
             <a class="laesMere" onclick="">læs mere</a>
+
+            <hr class="solid">
         </div>
 
-        <hr class="solid">
 
 
         <div class="moedTeametSektion slide-in-left">
 
-            <img class="gruppebilled" src="images/gruppebilled.png">
             <div class="moedTeamet">
+                <img class="gruppebilled" src="images/gruppebilled.png">
                 <h5>Mød Teamet</h5></div>
         </div>
-
-
     </div>
-
-    <div class="hev-state2">
-
-        <div class="returnDiv"><img src="img/back-arrow.png"> <h5>Vend tilbage</h5></div>
-
-        <!-- Slider main container -->
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide swiperPage swiperPage1">
-
-                    <img src="images/0.jpg" alt="Team Member 1">
-
-                </div>
-                <div class="swiper-slide swiperPage swiperPage2">
-
-                    <img src="images/000.jpg" alt="Team Member 2">
-
-                </div>
-                <div class="swiper-slide swiperPage swiperPage3">
-
-                    <img src="images/02.jpg" alt="Team Member 3">
-
-                </div>
-                <div class="swiper-slide swiperPage swiperPage4">
-
-                    <img src="images/0.jpg" alt="Team Member 4">
-
-                </div>
-                <div class="swiper-slide swiperPage swiperPage5">
-
-                    <img src="images/000.jpg" alt="Team Member 5">
-
-                </div>
-                <div class="swiper-slide swiperPage swiperPage6">
-
-                    <img src="images/02.jpg" alt="Team Member 6">
-
-                </div>
-                <div class="swiper-slide swiperPage swiperPage7">
-
-                    <img src="images/0.jpg" alt="Team Member 7">
-
-                </div>
-                <div class="swiper-slide swiperPage swiperPage8">
-
-                    <img src="images/000.jpg" alt="Team Member 8">
-
-                </div>
-                <div class="swiper-slide swiperPage swiperPage9">
-
-                    <img src="images/02.jpg" alt="Team Member 9">
-
-                </div>
-                <div class="swiper-slide swiperPage swiperPage10">
-
-                    <img src="images/0.jpg" alt="Team Member 10">
-
-                </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-        </div>
-
-    </div>
-
 
     <div class="hev-state3">
-
         <div class="returnDiv"><img src="img/back-arrow.png"> <h5>Vend tilbage</h5></div>
 
         <!-- Slider main container -->
@@ -154,7 +110,6 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide swiperPage swiperPage1">
-
                     <div>
                         <img class="teamMemberPic" src="img/portraits/sidsel.png">
 
@@ -322,34 +277,60 @@
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</section>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+
+<section class="heightWindow borderTest w-100 bg-secondary">
+    <div class="d-flex flex-column">
+        <div class="hovedframe hovedborder">
+
+            <div class="d-flex justify-content-center mx-2 my-4 mx-md-4 my-md-5 my-lg-4 text-light"><h1>kontakt os</h1></div>
+
+            <div class="d-md-flex flex-md-row justify-content-lg-center">
+                <div class="d-flex justify-content-center justify-content-lg-start pr-lg-5">
+                    <iframe class="d-sm-none" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d575.3575985634228!2d11.86483!3d54.772401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356ec3633d2a36d8!2sBusiness%20Lolland-Falster!5e0!3m2!1sda!2sdk!4v1600978109351!5m2!1sda!2sdk" width="250" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe class="specileSize pr-lg-5 d-none d-sm-block" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d575.3575985634228!2d11.86483!3d54.772401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x356ec3633d2a36d8!2sBusiness%20Lolland-Falster!5e0!3m2!1sda!2sdk!4v1600978109351!5m2!1sda!2sdk" width="700" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+
+
+                <div class="contact-section2 d-flex flex-column flex-sm-row justify-content-sm-center flex-md-column flex-lg-column justify-content-lg-center align-items-center align-content-sm-center   pl-lg-5">
+                    <a href="mailto:FrontDU@gmail.com" target="_blank"><i class="opacityaction py-lg-5 pl-sm-5 pr-sm-5 pr-sm-5 pl-lg-5  fas fa-envelope text-light"></i></a>
+                    <a href="https://www.instagram.com/frontdigitaludvikling"><i class="opacityaction py-lg-5 pl-sm-5 pr-sm-5 pl-lg-5 fab fa-instagram text-light"></i></a>
+                </div>
+            </div>
+            <div class="text-light d-flex justify-content-center font-weight-bold py-2 py-lg-3"><p>© 2020 Bureau 1</p></div>
         </div>
 
     </div>
 
-
-
-
-</div>
+</section>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scrollSnappy.js"></script>
 <script>
 
-    $(function () {
+    $(document).ready(function(){
 
         $('.moedTeamet').on('click',function(){
             $('.moedTeametSektion').hide();
             $('.hev-state3').fadeIn(1000);
         });
 
-        var mySwiper = new Swiper('.swiper-container', {
+        $('.returnDiv').on('click',function(){
+            $('.hev-state3').hide();
+            $('.moedTeametSektion').fadeIn(1000);
+        });
+
+        var mySwiper = new Swiper('.hev-state3 .swiper-container', {
             // Optional parameters
             direction: 'horizontal',
             slidesPerView: 2,
+            observer: true,
+            observeParents: true,
             margin: 5,
             loop: true,
             centeredSlides: true,
@@ -385,8 +366,12 @@
     });
 
 
+    $('.hev-state3').hide();
 
 </script>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
